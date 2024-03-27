@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Say HI - Chat App
   description: >-
-    # [Domain name after deployment goes here]
+    # say-hi-backend.vercel.app
 
     **Say-Hi** is an easy to use chat application.
 
