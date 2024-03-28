@@ -32,7 +32,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   pingTimeout: 60000,
   cors: {
-    origin: process.env.CORS_ORIGIN,
+    origin: process.env.CORS_ORIGIN.split(","),
     credentials: true,
   },
 });
@@ -49,6 +49,7 @@ app.use(
     credentials: true,
   })
 );
+
 
 app.use(requestIp.mw());
 
@@ -179,7 +180,7 @@ app.use(
     swaggerOptions: {
       docExpansion: "none", // keep all the sections collapsed by default
     },
-    customSiteTitle: "FreeAPI docs",
+    customSiteTitle: "say hi docs",
   })
 );
 
